@@ -14,14 +14,29 @@
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
+
+  <div class="inputs">
+    <button data-label="instructions" class="rainbow-hover">
+      <span class="sp">Enter the width and height of the card:</span>
+    </button>
+    
+    <input id="cardWidth" type="text" autocomplete="off" name="text" class="input" placeholder="Enter width in px">
+    <input id="cardHeight" type="text" autocomplete="off" name="text" class="input" placeholder="Enter height in px">
+    <button id="changeinputs">Apply Size</button>
+  </div>
+
   <div class="container">
     <div class="card">
       <div id="topSuit">♥</div>
       <div id="number">8</div>
       <div id="bottomSuit">♥</div>
     </div>
+    <button class="infoButton">
+      In 10 seconds, a new card will appear
+    </button>
     <button id="reloadButton">New Card</button>
   </div>
+
   <script src="/src/app.js"></script>
 </body>
 </html>

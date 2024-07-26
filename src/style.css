@@ -24,6 +24,9 @@ body {
   border: 2px solid #ddd;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
   transition: transform 0.3s ease;
+  margin-right: 50px;
+  margin-bottom: 30px;
+
 }
 
 .card:hover {
@@ -78,7 +81,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
-  margin-top: 70px;
+  margin-top: 20px;
+  margin-right: 50px;
+
 }
 
 #reloadButton:hover {
@@ -94,3 +99,135 @@ body {
               0 0 10px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
+
+.infoButton {
+  --clr-font-main: hsla(0, 0%, 20%, 1);
+  --btn-bg-1: hsla(200, 70%, 50%, 1);
+  --btn-bg-2: hsla(220, 70%, 60%, 1);
+  --btn-bg-color: hsla(360, 100%, 100%, 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: background-position 0.8s, box-shadow 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.infoButton:hover {
+  background-position: right top;
+  box-shadow: 0px 0px 25px rgba(100, 100, 255, 0.7), 0px 5px 10px -1px rgba(50, 50, 200, 0.4); /* Efecto de sombra más brillante al pasar el ratón */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .infoButton {
+    transition: linear;
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -100px;
+  margin-right: 50px;
+}
+
+.inputs label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.inputs .input {
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+}
+
+.inputs .input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
+}
+
+#changeinputs {
+  font: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f0f0f0;
+  border: 0;
+  color: #242424;
+  border-radius: 0.5em;
+  font-size: 1.35rem;
+  padding: 0.375em 1em;
+  font-weight: 600;
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#changeinputs:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.rainbow-hover {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7576;
+  background-color: #2B3044;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px #2B3044,
+    0px 4px 16px #2B3044;
+  transform-style: preserve-3d;
+  transform: scale(var(--s, 1)) perspective(600px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  perspective: 600px;
+  transition: transform 0.1s;
+  margin-bottom: 30px;
+}
+
+.sp {
+  background: linear-gradient(
+      90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: block;
+}
+

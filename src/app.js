@@ -1,5 +1,6 @@
 window.onload = function() {
   randomCard();
+  setInterval(randomCard, 10000); // Cambia la carta cada 10 segundos
 };
 
 function randomCard() {
@@ -25,9 +26,24 @@ function randomCard() {
 
   document.getElementById("topSuit").style.color = suitColor;
   document.getElementById("bottomSuit").style.color = suitColor;
-
 }
 
 document.getElementById("reloadButton").addEventListener("click", function() {
   randomCard();
 });
+
+function updateCardDimensions() {
+  const width = document.getElementById('cardWidth').value;
+  const height = document.getElementById('cardHeight').value;
+  
+  //si los inputs no están vacíos y son mayores que 0
+  if (width && height && width > 0 && height > 0) {
+    const card = document.querySelector('.card');
+    card.style.width = `${width}px`;
+    card.style.height = `${height}px`;
+  } else {
+    alert('Please enter valid positive numbers for width and height.');
+  }
+}
+
+document.getElementById('changeinputs').addEventListener('click', updateCardDimensions);
